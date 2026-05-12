@@ -15,7 +15,7 @@ export default function Home() {
     <main>
       <section className="student-hero">
         <div className="hero-copy">
-          <span className="kicker">👋 Сәлем, Айша!</span>
+          <span className="kicker">👋 Сәлем, Оқушы!</span>
           <h1>Жаңа шыңдар күтіп тұр!</h1>
           <p>Бүгінгі мақсат: Жаратылыстанудан 1 сабақ өту және Математикадан 50 XP жинау.</p>
           <div className="hero-actions">
