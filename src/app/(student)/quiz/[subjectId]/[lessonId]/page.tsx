@@ -11,6 +11,7 @@ const subjectEmoji: Record<string, string> = {
   reading: "📖",
   science: "🔬",
   world: "🌍",
+  kazakh: "✍️",
 };
 
 export default function QuizPage({ params }: { params: Promise<{ subjectId: string; lessonId: string }> }) {

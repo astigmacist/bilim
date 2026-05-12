@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BilimQuest AI · Пәндер</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="subjects">
+    <header class="site-header">
+      <a class="logo" href="./index.html"><span>🚀</span><b>BilimQuest AI</b></a>
+      <nav class="main-nav" aria-label="Оқушы мәзірі">
+        <a href="./index.html">🏠 Басты бет</a>
+        <a href="./subjects.html" class="active">📚 Пәндер</a>
+        <a href="./leaderboard.html">🏆 Рейтинг</a>
+        <a href="./result.html">🤖 AI талдау</a>
+      </nav>
+      <a class="teacher-link" href="./teacher-login.html">👩‍🏫 Мұғалімге кіру</a>
+    </header>
+
+    <main class="page-shell">
+      <section class="catalog-hero">
+        <span class="kicker">🌍 Оқу картасы</span>
+        <h1>Әр пән жеке әлем — кіріп, зерттей бастар!</h1>
+        <p>Оқулық тақырыптарынан жасалған интерактивті сабақтар. Әр сабақ функционалдық және логикалық сауаттылықты дамытады.</p>
+      </section>
+      <div class="subject-catalog" data-render="subject-catalog"></div>
+    </main>
+
+    <nav class="mobile-nav">
+      <a href="./index.html"><span class="icon">🏠</span>Басты бет</a>
+      <a href="./subjects.html" class="active"><span class="icon">📚</span>Пәндер</a>
+      <a href="./leaderboard.html"><span class="icon">🏆</span>Рейтинг</a>
+      <a href="./result.html"><span class="icon">🤖</span>AI талдау</a>
+    </nav>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BilimQuest AI · Оқушы</title>
+    <meta name="description" content="BilimQuest AI — оқушыларға арналған геймификацияланған оқу платформасы" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <a class="logo" href="./index.html" aria-label="BilimQuest AI">
+        <span>🚀</span>
+        <b>BilimQuest AI</b>
+      </a>
+      <nav class="main-nav" aria-label="Оқушы мәзірі">
+        <a href="./index.html" class="active">🏠 Басты бет</a>
+        <a href="./subjects.html">📚 Пәндер</a>
+        <a href="./leaderboard.html">🏆 Рейтинг</a>
+        <a href="./result.html">🤖 AI талдау</a>
+      </nav>
+      <a class="teacher-link" href="./teacher-login.html">👩‍🏫 Мұғалімге кіру</a>
+    </header>
+
+    <main class="page-shell">
+      <!-- Hero -->
+      <section class="student-hero">
+        <div class="hero-copy">
+          <span class="kicker">✨ 2-сынып · ойын арқылы оқу</span>
+          <h1>Бүгін жаңа миссияны ашып, сауаттылық деңгейіңді өсір 🌟</h1>
+          <p>Әр сабақ қысқа оқиға, зерттеу тапсырмасы, логикалық сұрақ және тесттен тұрады. Соңында AI қай жерде қиналғаныңды түсіндіріп, келесі қадамды ұсынады.</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="./subjects.html">🎮 Оқуды бастау</a>
+            <a class="ghost-action" href="./lesson.html?subject=science&lesson=observe">⚡ Бүгінгі миссия</a>
+          </div>
+        </div>
+        <aside class="player-card">
+          <div class="player-avatar">А</div>
+          <div>
+            <span>Оқушы</span>
+            <h2>Айша</h2>
+          </div>
+          <div class="level-meter">
+            <strong>🏆 Level 4</strong>
+            <span>1280 / 2000 XP</span>
+            <i><b style="width: 64%"></b></i>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span style="background:rgba(255,181,71,0.2);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:800;">🔥 7 күн streak</span>
+            <span style="background:rgba(34,197,94,0.15);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:800;">⭐ #2 Рейтинг</span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Subjects -->
+      <section class="section-head">
+        <div>
+          <span class="kicker">🌍 Оқу әлемдері</span>
+          <h2>Пәнді таңда</h2>
+        </div>
+        <a class="ghost-action" href="./subjects.html" style="min-height:40px;padding:8px 18px;font-size:14px;">Барлығын көру →</a>
+      </section>
+      <div class="subject-worlds" data-render="subjects"></div>
+
+      <!-- Daily path + badges -->
+      <section class="learning-row">
+        <article class="quest-card">
+          <span class="kicker">🗺️ Күндік жол</span>
+          <h2>3 қадамдық миссия</h2>
+          <div class="path-preview">
+            <a href="./lesson.html?subject=science&lesson=observe" class="path-node done">
+              <b>✓</b><span>Зерттеу</span>
+            </a>
+            <a href="./lesson.html?subject=math&lesson=market" class="path-node active">
+              <b>2</b><span>Логика</span>
+            </a>
+            <a href="./quiz.html?subject=math&lesson=market" class="path-node">
+              <b>3</b><span>Тест</span>
+            </a>
+          </div>
+        </article>
+        <article class="reward-card">
+          <span class="kicker">🏅 Жетістіктер</span>
+          <h2>Бейдждер</h2>
+          <div class="badges-mini">
+            <span>🔬 Зерттеуші</span>
+            <span>🧠 Логик</span>
+            <span>📝 Дәлелдеуші</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>🚀 <b>BilimQuest AI</b> — Цифрлық және AI технологияларымен оқу</span>
+      <div style="display:flex;gap:20px;">
+        <a href="./subjects.html">📚 Пәндер</a>
+        <a href="./leaderboard.html">🏆 Рейтинг</a>
+        <a href="./teacher-login.html">👩‍🏫 Мұғалімге кіру</a>
+      </div>
+    </footer>
+
+    <nav class="mobile-nav">
+      <a href="./index.html" class="active"><span class="icon">🏠</span>Басты бет</a>
+      <a href="./subjects.html"><span class="icon">📚</span>Пәндер</a>
+      <a href="./leaderboard.html"><span class="icon">🏆</span>Рейтинг</a>
+      <a href="./result.html"><span class="icon">🤖</span>AI талдау</a>
+    </nav>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Rounded background with gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4f7cf8"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <!-- Rocket body -->
+  <ellipse cx="32" cy="28" rx="10" ry="16" fill="white" opacity="0.95"/>
+  <!-- Rocket nose -->
+  <path d="M32 10 L24 24 L40 24 Z" fill="#fbbf24"/>
+  <!-- Window -->
+  <circle cx="32" cy="26" r="5" fill="#bfdbfe"/>
+  <circle cx="32" cy="26" r="3" fill="#3b82f6"/>
+  <!-- Fins -->
+  <path d="M22 36 L18 44 L26 40 Z" fill="#fbbf24"/>
+  <path d="M42 36 L46 44 L38 40 Z" fill="#fbbf24"/>
+  <!-- Flame -->
+  <ellipse cx="32" cy="46" rx="6" ry="8" fill="#f97316" opacity="0.9"/>
+  <ellipse cx="32" cy="49" rx="4" ry="5" fill="#fbbf24" opacity="0.9"/>
+</svg>
