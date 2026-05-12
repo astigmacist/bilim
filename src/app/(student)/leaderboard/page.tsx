@@ -10,7 +10,7 @@ export default function LeaderboardPage() {
     "linear-gradient(135deg,#fef3c7,#fed7aa)",
   ];
 
-  const meIndex = ranked.findIndex(s => s.name === "Айша");
+  const meIndex = ranked.findIndex(s => s.name === "Қуантқан Айша");
 
   return (
     <main>
