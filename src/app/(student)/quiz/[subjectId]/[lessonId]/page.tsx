@@ -18,18 +18,31 @@ export default function QuizPage({ params }: { params: Promise<{ subjectId: stri
   const router = useRouter();
   const { data, isLoaded } = useBQData();
 
-  if (!isLoaded) return <main className="quiz-shell" style={{ padding: 40 }}>Жүктелуде...</main>;
-
-  const subject = data.subjects.find((s) => s.id === subjectId);
-  if (!subject) return notFound();
-  const lesson = subject.lessons.find((l) => l.id === lessonId);
-  if (!lesson) return notFound();
-
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [feedback, setFeedback] = useState<{ chosen: number; correct: number; explanation: string } | null>(null);
 
+  if (!isLoaded) return <main className="quiz-shell" style={{ padding: 40 }}>Жүктелуде...</main>;
+
+  const subject = data.subjects.find((s) => s.id === subjectId);
+  const lesson = subject?.lessons.find((l) => l.id === lessonId);
+
+  if (!subject || !lesson) return notFound();
+
+  // Handle case where lesson has no quiz questions
+  if (!lesson.quiz || lesson.quiz.length === 0) {
+    return (
+      <main className="quiz-shell" style={{ padding: 40, textAlign: "center" }}>
+        <h1>🚫 Тест табылмады</h1>
+        <p>Кешіріңіз, бұл сабақ үшін тест сұрақтары әлі дайындалмаған.</p>
+        <button onClick={() => router.back()} className="primary-action" style={{ marginTop: 20 }}>Кері қайту</button>
+      </main>
+    );
+  }
+
   const item = lesson.quiz[current];
+  if (!item) return <main className="quiz-shell" style={{ padding: 40 }}>Қате: Сұрақ табылмады.</main>;
+
   const pct = Math.round(((current) / lesson.quiz.length) * 100);
   const emoji = subjectEmoji[subject.id] || "📌";
 
