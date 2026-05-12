@@ -9,6 +9,7 @@ const subjectEmoji: Record<string, string> = {
   reading: "📖",
   science: "🔬",
   world: "🌍",
+  kazakh: "✍️",
 };
 
 export default function SubjectsPage() {

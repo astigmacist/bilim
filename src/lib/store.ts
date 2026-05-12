@@ -9,11 +9,11 @@ export function useBQData() {
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem("bq_data");
+      const stored = localStorage.getItem("bq_data_v2");
       if (stored) {
         setData(JSON.parse(stored));
       } else {
-        localStorage.setItem("bq_data", JSON.stringify(initialData));
+        localStorage.setItem("bq_data_v2", JSON.stringify(initialData));
       }
     } catch (e) {
       console.error("Failed to load bq_data from localStorage", e);
